@@ -7,7 +7,7 @@
 ## 本仓库提供下列配置教程
 
 - **[ADC+DMA配置](https://github.com/ConstStrings/2025UESTCMengShengCup_C/blob/master/doc/1.ADC%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)**
-- **[DAC+DMA配置](https://github.com/ConstStrings/2025UESTCMengShengCup_C/blob/master/doc/1.ADC%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)**
+- **[DAC+DMA配置](https://github.com/ConstStrings/2025UESTCMengShengCup_C/blob/master/doc/2.DAC%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)**
 - **DSP库配置**
 
 ## 仓库组成
