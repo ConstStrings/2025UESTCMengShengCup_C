@@ -20,11 +20,14 @@
 #include "main.h"
 #include "adc.h"
 #include "dma.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <string.h>
+#include <stdarg.h>
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -56,7 +59,16 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+int myprintf(const char *format, ...)
+{
+    char buffer[128]; 
+    va_list args;
+    va_start(args, format);
+    vsnprintf(buffer, sizeof(buffer), format, args);
+    va_end(args);
 
+    return HAL_UART_Transmit(&huart3, (uint8_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
+}
 /* USER CODE END 0 */
 
 /**
@@ -89,8 +101,9 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_ADC1_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  myprintf("System Start!\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
