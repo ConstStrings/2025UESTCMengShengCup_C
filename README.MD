@@ -25,7 +25,7 @@
 
 #### STM32CubeMX
 
-![](./imgs/CUBE.png)
+![](./imgs/cube.png)
 
 #### 安装教程B站自行搜索
 
