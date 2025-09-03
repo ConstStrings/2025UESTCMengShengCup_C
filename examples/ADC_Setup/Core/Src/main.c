@@ -48,7 +48,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uint16_t My_adcData [512]={0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -104,6 +104,7 @@ int main(void)
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
   myprintf("System Start!\n");
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)My_adcData, 512); // 用的哪个ADC，存在哪个数组里面，数组长度（采样点数）
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -163,7 +164,16 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+    if(hadc->Instance == ADC1)
+    {
+        for(int i = 0; i < 512; i++)
+		{
+			myprintf("ADC_Data[%d]:%d\n",i, My_adcData[i]);
+		}
+	}
+}
 /* USER CODE END 4 */
 
 /**
