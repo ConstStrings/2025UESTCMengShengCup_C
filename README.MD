@@ -19,15 +19,27 @@
 
 ### 软件安装
 
-#### Keil uvision5
+**Keil uvision5**
 
 ![](./imgs/keil.png)
 
-#### STM32CubeMX
+**STM32CubeMX**
 
 ![](./imgs/cube.png)
 
-#### 安装教程B站自行搜索
+**安装教程B站自行搜索**
+
+### 硬件准备
+
+**不在元件包中提供，但强烈建议购买的元件：**
+
+- **STLINK烧录调试器（款式不唯一）**
+
+  <img src="./imgs/it1.png" style="zoom:50%;" />
+
+- **USB转TTL（串口）（款式不唯一）**
+
+  <img src="./imgs/it2.png" style="zoom:50%;" />
 
 ### 相关知识
 
