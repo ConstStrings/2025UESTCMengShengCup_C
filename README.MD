@@ -8,7 +8,7 @@
 
 - **[ADC+DMA配置](https://github.com/ConstStrings/2025UESTCMengShengCup_C/blob/master/doc/1.ADC%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)**
 - **[DAC+DMA配置](https://github.com/ConstStrings/2025UESTCMengShengCup_C/blob/master/doc/2.DAC%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)**
-- **DSP库配置**
+- **[DSP库配置](https://github.com/ConstStrings/2025UESTCMengShengCup_C/blob/master/doc/3.DSP%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)**
 
 ## 仓库组成
 

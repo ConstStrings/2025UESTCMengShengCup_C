@@ -1,7 +1,7 @@
 Dependencies for Project 'DSP_Setup', Target 'DSP_Setup': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (startup_stm32g431xx.s)(0x68B8E038)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_DSP_Setup-IE:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include-IE:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\PrivateInclude-IE:\Hardware\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Hardware\MDK\Packs\Keil\STM32G4xx_DFP\1.6.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 539" --pd "_RTE_ SETA 1" --pd "STM32G431xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32g431xx.lst --xref -o dsp_setup\startup_stm32g431xx.o --depend dsp_setup\startup_stm32g431xx.d)
-F (../Core/Src/main.c)(0x68B8E035)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_DSP_Setup-IE:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include-IE:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\PrivateInclude-IE:\Hardware\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Hardware\MDK\Packs\Keil\STM32G4xx_DFP\1.6.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_M-o dsp_setup\main.o --omf_browse dsp_setup\main.crf --depend dsp_setup\main.d)
+F (../Core/Src/main.c)(0x68B91D64)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_DSP_Setup-IE:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include-IE:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\PrivateInclude-IE:\Hardware\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Hardware\MDK\Packs\Keil\STM32G4xx_DFP\1.6.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_M-o dsp_setup\main.o --omf_browse dsp_setup\main.crf --depend dsp_setup\main.d)
 I (../Core/Inc/main.h)(0x68B8E035)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x66EFC976)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x68B8E035)
@@ -34,6 +34,35 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x66EFC976)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x66EFC976)
 I (../Core/Inc/usart.h)(0x68B8E034)
 I (../Core/Inc/gpio.h)(0x68B8E034)
+I (E:\Hardware\MDK\Core\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
+I (E:\Hardware\MDK\Core\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (E:\Hardware\MDK\Core\ARM\ARMCC\include\stdarg.h)(0x5E8E3CC2)
+I (E:\Hardware\MDK\Core\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\arm_math.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\arm_math_types.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Core\ARM\ARMCC\include\float.h)(0x5E8E3CC2)
+I (E:\Hardware\MDK\Core\ARM\ARMCC\include\limits.h)(0x5E8E3CC2)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\arm_math_memory.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\none.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\utils.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\basic_math_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\interpolation_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\bayes_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\statistics_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\fast_math_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\matrix_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\complex_math_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\controller_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\support_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\distance_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\svm_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\svm_defines.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\transform_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\filtering_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\quaternion_math_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\dsp\window_functions.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\arm_const_structs.h)(0x64E2E2DE)
+I (E:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include\arm_common_tables.h)(0x64E2E2DE)
 F (../Core/Src/gpio.c)(0x68B8E034)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_DSP_Setup-IE:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\Include-IE:\Hardware\MDK\Packs\ARM\CMSIS-DSP\1.15.0\PrivateInclude-IE:\Hardware\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Hardware\MDK\Packs\Keil\STM32G4xx_DFP\1.6.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_M-o dsp_setup\gpio.o --omf_browse dsp_setup\gpio.crf --depend dsp_setup\gpio.d)
 I (../Core/Inc/gpio.h)(0x68B8E034)
 I (../Core/Inc/main.h)(0x68B8E035)

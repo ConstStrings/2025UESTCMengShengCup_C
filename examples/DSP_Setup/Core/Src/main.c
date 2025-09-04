@@ -23,7 +23,12 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <math.h>
+#include <string.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include "arm_math.h"
+#include "arm_const_structs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,7 +38,16 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+int myprintf(const char *format, ...)
+{
+    char buffer[128]; 
+    va_list args;
+    va_start(args, format);
+    vsnprintf(buffer, sizeof(buffer), format, args);
+    va_end(args);
 
+    return HAL_UART_Transmit(&huart3, (uint8_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
+}
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -88,7 +102,28 @@ int main(void)
   MX_GPIO_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  static float test_input[512]={0};
+  for (int i = 0; i < 512; i++)
+  {
+	test_input[i] += 4 * sinf(2 * PI * i / 64);
+	test_input[i] += 2 * sinf(2 * PI * i / 8);
+	test_input[i] += 1 * sinf(2 * PI * i / 4);
+  }
+  static float dsp_inputBuffer[1024];
+  for (int i = 0; i < 512; i++)
+  {
+	dsp_inputBuffer[2 * i] = test_input[i];
+	dsp_inputBuffer[2 * i + 1] = 0;
+  }
+  
+  static float dsp_outputBuffer[512];
+  arm_cfft_f32(&arm_cfft_sR_f32_len512, dsp_inputBuffer, 0, 1);
+  arm_cmplx_mag_f32(dsp_inputBuffer, dsp_outputBuffer, 512);
+  
+  for (int i = 0; i < 512; i++)
+  {
+	  myprintf("DSP Result:%d,%f\n", i, dsp_outputBuffer[i]);
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
